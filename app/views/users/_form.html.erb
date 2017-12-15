@@ -12,8 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %>
+    <%= f.label :name, '名前' %>
     <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :skill_list, "スキル・特技（カンマ区切り）" %><br>
+    <%= text_field_tag 'user[skill_list]', @user.skill_list.join(',') %>
+  </div>
+
+  <div class="field">
+    <%= f.label :internet_list, "興味のある分野（カンマ区切り）" %><br>
+    <%= text_field_tag 'user[interest_list]', @user.interest_list.join(',') %>
   </div>
 
   <div class="actions">
